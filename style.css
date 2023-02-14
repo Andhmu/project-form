@@ -1,3 +1,7 @@
+*{
+  margin: 0;
+  padding: 0;
+}
 input {
     display: block;
     margin: 0 0 11px 0;
@@ -7,4 +11,5 @@ input {
     width: 150px;
     margin: 0 0 11px 0;
   }
+
   
