@@ -1,15 +1,179 @@
-*{
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  color: var(--main-text-color);
+  font-family: "Poppins", sans-serif;
 }
-input {
-    display: block;
-    margin: 0 0 11px 0;
-  }
-  select {
-    display: block;
-    width: 150px;
-    margin: 0 0 11px 0;
+
+:root {
+  --page: calc(100vh - 2 * var(--form-margin) - 180px);
+  --alt-text-color: rgb(116, 152, 175);
+  --input-back-color: rgba(255, 255, 255, 0.322);
+  --main-text-color: rgb(0, 99, 180);
+  --background-color: rgb(89, 169, 223);
+  --alt-background-color: rgb(61, 165, 250);
+  --alt-background-color-hover: rgb(34, 155, 255);
+  --radius-padding: 6px;
+  --form-margin: 15px;
+  --form-width: 230px;
+  --input-block-height: 41px;
+  --button-block-height: 30px;
+  --margin-bot-block: 0 0 11px 0;
+  --help: 2px solid rgb(255, 153, 0);
+}
+body {
+  background-color: lightblue;
+}
+.content {
+  margin: 15px;
+  height: var(--page);
+  box-sizing: content-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: 180px;
+}
+.logo-block {
+  width: 90px;
+  height: 90px;
+  border-radius: 50px;
+  color: white;
+  background-color: var(--alt-background-color);
+  box-shadow: 1px 6px 6px rgb(90, 132, 160);
+  margin-bottom: 30px;
+}
+.logo-block:hover {
+  background-color: var(--alt-background-color-hover);
+  cursor: pointer;
+}
+
+.content .flex-content {
+  width: var(--form-width);
+}
+
+.content-form {
+  border: 2px solid var(--border-color);
+  margin: 11px;
+  height: var(--page);
+  box-sizing: content-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-content,
+.flex-form-content {
+  width: var(--form-width);
+}
+
+.flex-form-content input {
+  height: var(--input-block-height);
+  margin: var(--margin-bot-block);
+  border-radius: var(--radius-padding);
+  background-color: var(--input-back-color);
+  box-shadow: 1px 1px 6px rgb(146, 191, 221);
+  padding: var(--form-margin);
+  width: var(--form-width);
+}
+
+input::placeholder {
+  color: var(--alt-text-color);
+}
+.flex-form-content span {
+  margin-bottom: var(--radius-padding);
+  display: block;
+  float: right;
+}
+.flex-select {
+  width: 100%;
+  margin-bottom: var(--form-margin);
+  height: var(--input-block-height);
+  padding-left: var(--radius-padding);
+  border-radius: var(--radius-padding);
+  background-color: rgba(255, 255, 255, 0.322);
+  box-shadow: 1px 1px 6px rgb(146, 191, 221);
+}
+select:focus {
+  background-color: var(--input-back-color);
+  border-radius: var(--radius-padding);
+}
+.flex-btn button,
+.flex-btn-reg button {
+  border-radius: var(--radius-padding);
+  height: var(--button-block-height);
+  background-color: var(--alt-background-color);
+  color: rgb(255, 255, 255);
+  transition: 0.15s;
+  margin-bottom: 15px;
+}
+.flex-btn button:hover,
+.flex-btn-reg button:hover {
+  background-color: var(--alt-background-color-hover);
+  cursor: pointer;
+}
+.flex-btn-reg button {
+  width: 100%;
+}
+
+.flex-btn {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex-btn button {
+  width: 49%;
+}
+
+@media only screen and (min-width: 540px) {
+  .flex-form-content input,
+  .flex-select {
+    height: 90px;
+    width: 500px;
+    font-size: 21px;
   }
 
-  
+  .content .flex-content,
+  .flex-form-content,
+  .content-form {
+    width: 500px;
+  }
+  .flex-btn button,
+  .flex-form-content button {
+    height: 50px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: 111px;
+    padding: 15px;
+  }
+  .content {
+    align-items: flex-end;
+  }
+  .flex-form-content input,
+  .flex-select {
+    height: var(--input-block-height);
+    width: var(--form-width);
+    font-size: 15px;
+  }
+
+  .content .flex-content,
+  .flex-form-content,
+  .content-form {
+    width: var(--form-width);
+  }
+  .flex-btn button,
+  .flex-form-content button {
+    height: 30px;
+  }
+}
