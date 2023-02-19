@@ -1,36 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Static Template</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <form method="POST" action="/login">
-    <label>
-      <span>
-          введите логин:
-      </span>
-      <input 
-      type="email"
-      name="login"
-      placeholder="your e-mail"
-      minlength="6"/>
-      <label>
-          <label>
-              <span>
-                  введите пароль:
-                </span>
-                <input 
+    <div class="content">
+      <header>
+        <div>
+          <button type="submit" class="logo-block" onclick="location='/'">
+            Logotype
+          </button>
+        </div>
+      </header>
+      <div class="to-login-2d-half">
+        <div class="login-input-block">
+          <form method="POST" action="/" class="input-content">
+            <label>
+              <input
+                type="email"
+                name="login"
+                placeholder="your e-mail"
+                minlength="6"
+              />
+            </label>
+            <label>
+              <input
                 type="password"
                 name="password"
-                placeholder="your password"/>
-              </label>
-              <button type="submit">
-                Login
-              </button>
-            </form>
-</body>
+                placeholder="your password"
+              />
+            </label>
+          </form>
+          <div class="btn-block">
+            <button type="submit">
+              Login
+            </button>
+            <button type="submit" onclick="location='./form.html'">
+              Registration
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>

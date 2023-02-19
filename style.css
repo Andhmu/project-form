@@ -1,15 +1,124 @@
-*{
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  color: var(--main-text-color);
 }
-input {
-    display: block;
-    margin: 0 0 11px 0;
-  }
-  select {
-    display: block;
-    width: 150px;
-    margin: 0 0 11px 0;
-  }
 
-  
+:root {
+  --page: calc(100vh - 2 * var(--form-margin));
+  --alt-text-color: rgb(116, 152, 175);
+  --input-back-color: rgba(255, 255, 255, 0.322);
+  --main-text-color: rgb(0, 99, 180);
+  --background-color: rgb(89, 169, 223);
+  --alt-background-color: rgb(61, 165, 250);
+  --alt-background-color-hover: rgb(34, 155, 255);
+  --radius-padding: 6px;
+  --form-margin: 15px;
+  --form-width: 230px;
+  --input-block-height: 41px;
+  --button-block-height: 30px;
+  --margin-bot-block: 0 0 11px 0;
+  --help: 2px solid rgb(255, 153, 0);
+}
+body {
+  background-color: lightblue;
+}
+.content {
+  margin: 11px;
+  height: var(--page);
+  box-sizing: content-box;
+  display: grid;
+  grid-template-rows: 1fr 4fr;
+}
+.to-login-2d-half,
+.to-form-2d-half {
+  display: grid;
+}
+.to-login-2d-half {
+  align-self: end;
+  grid-template-columns: 1fr 1fr;
+}
+.to-form-2d-half {
+  align-self: start;
+}
+.logo-block {
+  width: 90px;
+  height: 90px;
+  border-radius: 50px;
+  color: white;
+  background-color: var(--alt-background-color);
+  box-shadow: 1px 6px 6px rgb(90, 132, 160);
+}
+.logo-block:hover {
+  background-color: var(--alt-background-color-hover);
+  cursor: pointer;
+}
+
+.login-input-block,
+.form-input-block {
+  width: var(--form-width);
+  display: grid;
+}
+.login-input-block {
+  grid-area: right;
+}
+.form-input-block {
+  grid-area: center;
+}
+
+.input-content {
+  width: var(--form-width);
+}
+
+.input-content input {
+  height: var(--input-block-height);
+  margin: var(--margin-bot-block);
+  border-radius: var(--radius-padding);
+  background-color: var(--input-back-color);
+  box-shadow: 1px 1px 6px rgb(146, 191, 221);
+  padding: var(--form-margin);
+}
+
+input::placeholder {
+  color: var(--alt-text-color);
+}
+.input-content span {
+  margin-bottom: var(--radius-padding);
+  display: block;
+  float: right;
+}
+.grid-select {
+  width: 100%;
+  margin-bottom: var(--form-margin);
+  height: var(--input-block-height);
+  padding-left: var(--radius-padding);
+  border-radius: var(--radius-padding);
+  background-color: rgba(255, 255, 255, 0.322);
+  box-shadow: 1px 1px 6px rgb(146, 191, 221);
+}
+select:focus {
+  background-color: var(--input-back-color);
+  border-radius: var(--radius-padding);
+}
+.btn-block button,
+.btn-block-reg button {
+  border-radius: var(--radius-padding);
+  height: var(--button-block-height);
+  background-color: var(--alt-background-color);
+  color: rgb(255, 255, 255);
+  transition: 0.15s;
+}
+.btn-block button:hover,
+.btn-block-reg button:hover {
+  background-color: var(--alt-background-color-hover);
+  cursor: pointer;
+}
+.btn-block-reg button {
+  width: 100%;
+}
+.btn-block button {
+  width: 49%;
+}

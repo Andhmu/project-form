@@ -4,16 +4,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>Flex form</title>
   <link rel="stylesheet" href="./style.css">
   
 </head>
 <body>
-    <form method="POST" action="/login">
+    <div class="content">
+        <header>
+          <div><button type="submit" class="logo-block" onclick="location='./index.html'">Logotype</button>
+            </div>
+        </header>
+        <div class="to-form-2d-half">
+    <div class="form-input-block">
+    <form method="POST" action="/" class="input-content">
       <label>
-        <span>
-            Your login
-        </span>
         <input 
         type="text"
         name="login"
@@ -21,28 +25,19 @@
         minlength="6"/>
         <label>
             <label>
-                <span>
-                    Your email
-                </span>
                 <input 
                 type="email"
                 name="email"
                 placeholder="email"
-                minlength="6"/>
+                minlength="9"/>
                 <label>
             <label>
-                <span>
-                    Password
-                  </span>
                   <input 
                   type="password"
                   name="password"
                   placeholder="password"/>
                 </label>
                 <label>
-                    <span>
-                        Confirm password
-                      </span>
                       <input 
                       type="password"
                       name="password"
@@ -52,14 +47,18 @@
                         <span>
                             Choose languege
                           </span>
-                          <select name="select-one-of">
+                          <select name="select-one-of" class="grid-select">
                           <option selected>RU</option>
                           <option>EN</option>
                         </select>
                         </label>
+                        <div class="btn-block-reg">
                 <button type="submit">
-                  Login
+                  Register
                 </button>
               </form>
+          </div>
+        </div>
+      </div>
 </body>
 </html>
