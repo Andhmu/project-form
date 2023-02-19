@@ -30,19 +30,8 @@ body {
   margin: 11px;
   height: var(--page);
   box-sizing: content-box;
-  display: grid;
-  grid-template-rows: 1fr 4fr;
-}
-.to-login-2d-half,
-.to-form-2d-half {
-  display: grid;
-}
-.to-login-2d-half {
-  align-self: end;
-  grid-template-columns: 1fr 1fr;
-}
-.to-form-2d-half {
-  align-self: start;
+  display: flex;
+  flex-direction: column;
 }
 .logo-block {
   width: 90px;
@@ -57,23 +46,27 @@ body {
   cursor: pointer;
 }
 
-.login-input-block,
-.form-input-block {
+.content .flex-content {
   width: var(--form-width);
-  display: grid;
+  align-self: flex-end;
+  margin-top: auto;
 }
-.login-input-block {
-  grid-area: right;
-}
-.form-input-block {
-  grid-area: center;
+.content-form {
+  border: 2px solid var(--border-color);
+  margin: 11px;
+  height: var(--page);
+  box-sizing: content-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-.input-content {
+.flex-form-content {
   width: var(--form-width);
 }
 
-.input-content input {
+.flex-form-content input {
   height: var(--input-block-height);
   margin: var(--margin-bot-block);
   border-radius: var(--radius-padding);
@@ -85,12 +78,12 @@ body {
 input::placeholder {
   color: var(--alt-text-color);
 }
-.input-content span {
+.flex-form-content span {
   margin-bottom: var(--radius-padding);
   display: block;
   float: right;
 }
-.grid-select {
+.flex-select {
   width: 100%;
   margin-bottom: var(--form-margin);
   height: var(--input-block-height);
@@ -103,22 +96,28 @@ select:focus {
   background-color: var(--input-back-color);
   border-radius: var(--radius-padding);
 }
-.btn-block button,
-.btn-block-reg button {
+.flex-btn button,
+.flex-btn-reg button {
   border-radius: var(--radius-padding);
   height: var(--button-block-height);
   background-color: var(--alt-background-color);
   color: rgb(255, 255, 255);
   transition: 0.15s;
 }
-.btn-block button:hover,
-.btn-block-reg button:hover {
+.flex-btn button:hover,
+.flex-btn-reg button:hover {
   background-color: var(--alt-background-color-hover);
   cursor: pointer;
 }
-.btn-block-reg button {
+.flex-btn-reg button {
   width: 100%;
 }
-.btn-block button {
+
+.flex-btn {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex-btn button {
   width: 49%;
 }
