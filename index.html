@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Static Template</title>
+    <title>Social project</title>
     <link rel="stylesheet" href="./style.css" />
     <link
       rel="stylesheet"
@@ -12,40 +12,41 @@
     />
   </head>
   <body>
+    <header>
+      <div>
+        <button type="submit" class="logo-block" onclick="location='/'">
+          Logotype
+        </button>
+      </div>
+    </header>
     <div class="content">
-      <header>
-        <div>
-          <button type="submit" class="logo-block" onclick="location='/'">
-            Logotype
-          </button>
-        </div>
-      </header>
-
-      <div class="flex-content">
-        <form method="POST" action="/" class="flex-form-content">
-          <label>
-            <input
-              type="email"
-              name="login"
-              placeholder="your e-mail"
-              minlength="6"
-            />
-          </label>
-          <label>
-            <input
-              type="password"
-              name="password"
-              placeholder="your password"
-            />
-          </label>
-        </form>
-        <div class="flex-btn">
-          <button type="submit">
-            Login
-          </button>
-          <button type="submit" onclick="location='./form.html'">
-            Registration
-          </button>
+      <div class="login-content">
+        <div class="flex-content">
+          <form method="POST" action="/" class="flex-form-content">
+            <label>
+              <input
+                type="email"
+                name="login"
+                placeholder="your e-mail"
+                minlength="6"
+              />
+            </label>
+            <label>
+              <input
+                type="password"
+                name="password"
+                placeholder="your password"
+              />
+            </label>
+          </form>
+          <div class="flex-btn">
+            <button type="submit">
+              Sign in
+            </button>
+            <button type="submit" onclick="location='./form.html'">
+              Registration
+            </button>
+          </div>
         </div>
       </div>
     </div>

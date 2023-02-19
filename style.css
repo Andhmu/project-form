@@ -9,7 +9,7 @@
 }
 
 :root {
-  --page: calc(100vh - 2 * var(--form-margin));
+  --page: calc(100vh - 2 * var(--form-margin) - 180px);
   --alt-text-color: rgb(116, 152, 175);
   --input-back-color: rgba(255, 255, 255, 0.322);
   --main-text-color: rgb(0, 99, 180);
@@ -28,11 +28,18 @@ body {
   background-color: lightblue;
 }
 .content {
-  margin: 11px;
+  margin: 15px;
   height: var(--page);
   box-sizing: content-box;
   display: flex;
   flex-direction: column;
+  align-items: center;
+}
+header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: 180px;
 }
 .logo-block {
   width: 90px;
@@ -41,6 +48,7 @@ body {
   color: white;
   background-color: var(--alt-background-color);
   box-shadow: 1px 6px 6px rgb(90, 132, 160);
+  margin-bottom: 30px;
 }
 .logo-block:hover {
   background-color: var(--alt-background-color-hover);
@@ -49,9 +57,8 @@ body {
 
 .content .flex-content {
   width: var(--form-width);
-  align-self: flex-end;
-  margin-top: auto;
 }
+
 .content-form {
   border: 2px solid var(--border-color);
   margin: 11px;
@@ -59,8 +66,6 @@ body {
   box-sizing: content-box;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
 }
 
 .flex-content,
@@ -106,6 +111,7 @@ select:focus {
   background-color: var(--alt-background-color);
   color: rgb(255, 255, 255);
   transition: 0.15s;
+  margin-bottom: 15px;
 }
 .flex-btn button:hover,
 .flex-btn-reg button:hover {
@@ -123,4 +129,51 @@ select:focus {
 
 .flex-btn button {
   width: 49%;
+}
+
+@media only screen and (min-width: 540px) {
+  .flex-form-content input,
+  .flex-select {
+    height: 90px;
+    width: 500px;
+    font-size: 21px;
+  }
+
+  .content .flex-content,
+  .flex-form-content,
+  .content-form {
+    width: 500px;
+  }
+  .flex-btn button,
+  .flex-form-content button {
+    height: 50px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: 111px;
+    padding: 15px;
+  }
+  .content {
+    align-items: flex-end;
+  }
+  .flex-form-content input,
+  .flex-select {
+    height: var(--input-block-height);
+    width: var(--form-width);
+    font-size: 15px;
+  }
+
+  .content .flex-content,
+  .flex-form-content,
+  .content-form {
+    width: var(--form-width);
+  }
+  .flex-btn button,
+  .flex-form-content button {
+    height: 30px;
+  }
 }
