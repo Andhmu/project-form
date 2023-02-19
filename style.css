@@ -5,6 +5,7 @@
   outline: none;
   border: none;
   color: var(--main-text-color);
+  font-family: "Poppins", sans-serif;
 }
 
 :root {
@@ -80,6 +81,7 @@ body {
   background-color: var(--input-back-color);
   box-shadow: 1px 1px 6px rgb(146, 191, 221);
   padding: var(--form-margin);
+  width: var(--form-width);
 }
 
 input::placeholder {
