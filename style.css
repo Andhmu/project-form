@@ -207,6 +207,17 @@ a {
   background-color: var(--alt-background-color-hover);
   cursor: pointer;
 }
+.loading {
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(95, 136, 151, 0.753);
+  animation: hiden 0s ease-in 6s forwards;
+}
 @media only screen and (min-width: 540px) {
   .flex-form-content input,
   .flex-select {
@@ -264,5 +275,83 @@ a {
     border-radius: 9px;
     transition: 0.6s;
     right: 0;
+  }
+}
+
+.block-1 {
+  border: 1px solid blue;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fly-1 9s;
+  animation-iteration-count: 1;
+}
+.block-2 {
+  border: 1px solid blue;
+  width: 150px;
+  height: 150px;
+  animation: fly-2 9s;
+  animation-iteration-count: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logo-lo {
+  width: 100%;
+  box-sizing: border-box;
+}
+.logo-lo {
+  display: flex;
+  justify-content: center;
+}
+.logo-lo img {
+  object-fit: cover;
+  width: 90px;
+}
+
+@keyframes fly-1 {
+  0% {
+    opacity: 0;
+  }
+  6% {
+    opacity: 1;
+  }
+  90% {
+    transform: rotate(810deg);
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(810deg);
+  }
+}
+@keyframes fly-2 {
+  0% {
+    opacity: 0;
+  }
+  6% {
+    opacity: 1;
+  }
+  90% {
+    transform: rotate(-1620deg);
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(-1620deg);
+  }
+}
+@keyframes hiden {
+  to {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+}
+@keyframes content-hiden {
+  to {
+    width: 0;
+    height: 0;
+    overflow: visible;
   }
 }
