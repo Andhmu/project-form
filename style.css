@@ -41,6 +41,10 @@ header {
   justify-content: center;
   height: 180px;
 }
+img {
+  object-fit: cover;
+  width: 90px;
+}
 .logo-block {
   width: 90px;
   height: 90px;
